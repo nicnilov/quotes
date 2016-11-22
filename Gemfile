@@ -5,15 +5,8 @@ ruby '2.3.0'                                # use rbenv or RVM to support this
 gem 'rails', '~> 4.2.7'
 gem 'pg', '~> 0.19'                         # NOTE: on ubuntu do `apt-get install libpq-dev`
 gem 'jbuilder', '~> 2.2.0'                  # JSON serializer
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
 gem 'pry-rails'                             # better REPL
-gem 'rails_12factor'                        # serving statis assets and logging to stdout
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'jquery-rails'                          # Use jquery as the JavaScript library
 
 group :assets do
   gem 'sass-rails', '~> 5.0'
@@ -36,3 +29,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'                        # serving statis assets and logging to stdout
+end
