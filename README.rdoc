@@ -1,28 +1,23 @@
-== README
+#Quotes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails application to display random quotes, refreshing every ten minutes.
 
-Things you may want to cover:
+## What is there
 
-* Ruby version
+* A seed script picks up the quotes.csv file and populates the database, removing any previously existing quotes;
+* The `Quote` model provides a method to fetch a random quote;
+* The `QuotesController` implements `#index` action which fetches a quote and passes it over to a view, according to the request format (`:html` or `:json`);
+* Initial request from a browser is rendered as `:html` while subsequent updates are requested via `:json` ajax requests;
+* Client-side javascript fetches a new quote every ten minutes;
+* A random backdrop image is fetched from `lorempixel.com` website with every new quote;
+* Minimal tests for the controller and views.
 
-* System dependencies
+## What is missing
 
-* Configuration
+  * Automatic fullscreen transition is prohibited by browsers if made outside of scope of a user-generated event. For this reason a limited implementation is provided, requiring a click anywhere on the page to go fullscreen. Although with some perseverance it would certainly be possible to fabricate a user-generated event outside of a browser, the approach would be associated with added constraints and therefore is considered outside of the task’s scope;
 
-* Database creation
+  * Tests for the seed script are not implemented;
 
-* Database initialization
+  * Tests for frontend javascript are not implemented;
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  * Deployment script is not implemented.
