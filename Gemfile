@@ -7,9 +7,10 @@ gem 'pg', '~> 0.19'                         # NOTE: on ubuntu do `apt-get instal
 gem 'jbuilder', '~> 2.2.0'                  # JSON serializer
 gem 'pry-rails'                             # better REPL
 gem 'jquery-rails'                          # Use jquery as the JavaScript library
+gem 'sass-rails', '~> 5.0'                  # Normalize-rails depends on this, cant put in :assets block
+gem 'normalize-rails'                       # CSS reset
 
 group :assets do
-  gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '~> 2.7.0'
   gem 'execjs'                              # NOTE: on ubuntu install nodejs `sudo apt-get install nodejs`
 end
@@ -22,6 +23,7 @@ group :development, :test do
   gem 'pry-stack_explorer'                  # show and navigate stack in pry
   gem 'quiet_assets'                        # don't clutter log with served assets
   gem 'dotenv-rails'                        # load environment vars from ./.env
+  gem 'database_cleaner'                    # Reset database when testing
 end
 
 group :development do

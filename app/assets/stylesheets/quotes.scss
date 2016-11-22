@@ -1,0 +1,27 @@
+html {
+  background: url(http://lorempixel.com/1920/1080/?q=a) no-repeat center center fixed;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.quote {
+  color: white;
+  margin: 20% 10%;
+
+  .quote-text {
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+
+  .quote-author {
+    text-align: right;
+  }
+}

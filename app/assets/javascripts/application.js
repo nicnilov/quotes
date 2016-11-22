@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require screenfull.min
 //= require_tree .
+
