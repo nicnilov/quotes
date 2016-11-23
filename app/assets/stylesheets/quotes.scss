@@ -14,7 +14,8 @@ html {
 
 .quote {
   color: white;
-  margin: 20% 10%;
+  height: 60%;
+  width: 80%;
 
   .quote-text {
     font-size: 3em;
@@ -24,4 +25,13 @@ html {
   .quote-author {
     text-align: right;
   }
+}
+
+.center-absolute {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
